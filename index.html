@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="x/main.css">
+    <title>Task</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="navbar">
+
+            <div class="random">
+                <div class="r_icon pulse" id="random">📅</div>
+            </div>
+
+            <div><p id="logo" class="nav_logo">Task</p></div>
+
+            <div class="nav_color">
+
+                <div class="color_icon">
+
+                    <div class="icons pulse" id="open_btn">
+                        <i class="ri-quill-pen-fill"></i>
+                    </div>
+
+                    <div class="color_box" id="open_box">
+                        <h3 class="color">Color Switcher</h3>
+                        
+                        <div class="color_switcher">
+                            <button class="btn blue cycle" data-color="#4070f4" style="background: #4070f4;"></button>
+                            <button class="btn green" data-color="#3a9943" style="background: #3a9943;"></button>
+                            <button class="btn purple" data-color="#8e44ad" style="background: #8e44ad;"></button>
+                            <button class="btn orange" data-color="#f79f1f" style="background: #f79f1f;"></button>
+                            <button class="btn refresh" onclick="window.location.reload();"><i class="ri-refresh-line"></i></button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <main class="main">
+        <section class="home section" id="home">
+            <div class="home_container grid">
+                <h1 class="section_title">HOME</h1>
+
+                <!-- Searchbar -->
+                <div class="search">
+                    <div class="search_container">
+                        <i class="ri-search-line search_icon"></i>
+                        <input type="search" name="search" id="search" class="search_input" placeholder="Search"/>
+                    </div>
+                </div>
+                
+                <!-- Table -->
+                <div class="table container">
+                    <table class="table__x">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody class="x" id="x">
+                            <!--
+                            <tr>
+                                <td>Fecth Api</td>
+                                <td>Your task</td>
+                                <td>....................................</td>
+                            </tr>
+                            -->
+                        </tbody>
+                    </table>
+                    
+                    <!-- Rate & Refresh -->
+                    <div class="table_refresh__options">
+
+                        <div class="stars">
+                            <span class="table_refresh_label">Stars rate:</span>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                            <i class="ri-star-line"></i>
+                        </div>
+
+                        <div class="refresh__options">
+                            <span class="table_refresh_label">Refresh button</span>
+                            <button type="button" class="table_refresh__button" onclick="window.location.reload();">
+                                <i class="ri-refresh-line"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+                <!-- Modal -->
+                <div class="modal container">
+
+                    <button class="modal_button">
+                        <div class="modal_icon">
+                            <i class="ri-fingerprint-fill shere"></i>
+                            <i class="ri-send-plane-fill icon-shere" id="open_modal"></i>
+                        </div>
+                        <p class="modal_text">Modal</p>
+                    </button>
+
+                    <div class="modal_container" id="modal-container">
+                        <div class="modal_content">
+                            <div class="m_buttons">
+                                <div class="modal_close close-modal" id="remove"><i class="ri-close-circle-fill"></i></div>
+                                <div class="modal_close delete-img" id="delete"><i class="ri-delete-bin-2-fill"></i></div>
+                            </div>
+                            <div class="img_area" data-img="">
+                                <i class="ri-upload-cloud-line m_icon"></i>
+                                <h3>Upload Image</h3>
+                            </div>
+                            <div class="btn_form">
+                                <input type="file" id="file" accept="image/*" hidden>
+                                <button class="select_btn">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+<script src="x/javascript.js"></script>
+</body>
+</html>
